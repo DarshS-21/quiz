@@ -1,15 +1,17 @@
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  background-image: url(space1.jpeg);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  color: white;
 }
 
 .quiz-container {
-  background: white;
+  background: rgba(78, 77, 77, 0.6);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -19,22 +21,29 @@ body {
 
 h1 {
   text-align: center;
+  color:white;
 }
 
+
 .btn-grid {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
-  margin: 20px 0;
+  justify-content: center;
 }
 
 .btn {
-  padding: 10px 20px;
+  flex: 1 1 calc(50% - 10px);
+  padding: 12px 20px;
+  min-width: 120px;
+  max-width: 100%;
   border: none;
   border-radius: 5px;
   background-color: #007BFF;
   color: white;
   cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .btn:hover {
@@ -55,11 +64,11 @@ h1 {
   margin-right: 5px;
 }
 .btn-correct {
-  background-color: #28a745; /* Green */
+  background-color: #28a745;
   color: white;
 }
 
 .btn-wrong {
-  background-color: #dc3545; /* Red */
+  background-color: #dc3545;
   color: white;
 }
