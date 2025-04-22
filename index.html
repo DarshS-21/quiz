@@ -3,37 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quiz Game</title>
+  <title>Select Quiz</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="quiz-container">
-    <h1>Quiz Game</h1>
-
-    <!-- Quiz Topic Selector -->
-    <div id="quiz-selector">
-      <p>Select a Quiz:</p>
-      <button class="btn" onclick="startQuiz(geographyQuestions)">Geography</button>
-      <button class="btn" onclick="startQuiz(scienceQuestions)">Science</button>
+  <div class="main-container">
+  <div class="intro-text">
+    <h1 class="main-title">Welcome to QuizVerse 🌌</h1>
+    <p class="subtitle">
+      Dive into a world of discovery with <strong>QuizVerse</strong> — your go-to destination for fun, fast, and educational quizzes! Whether you're brushing up on your geography, testing your science smarts, or seeing how much history you remember, you're in the right place.  
+      <br><br>
+      Each quiz is designed to challenge your memory, make learning enjoyable, and even surprise you with fun facts along the way. From multiple choice to fill-in-the-blank, things are kept varied and engaging.  
+      <br><br>
+      Just choose a topic to begin — no sign-up, no pressure, just pure brain-boosting entertainment. Great for students, trivia lovers, or anyone curious about the world around them. 
+    </p>
+    <div class="quiz-container">
+      <div id="geography">
+        <img src="geo.png" alt="Globe" class="quiz-img" />
+        <h1>Geography</h1>
+        <p>Test your knowledge of countries, capitals, oceans, and landmarks from around the world. Perfect for anyone who loves maps, travel, or exploring global trivia!</p>
+        <button class="btn geo" onclick="selectQuiz('geography')">Play Geography</button>
+      </div>
+      <div id="science">
+        <img src="sci.png" alt="Atom" class="quiz-img" />
+        <h1>Science</h1>
+        <p>Dive into topics like planets, chemistry, biology, inventions, and more. Great for curious minds who enjoy discovering how the world works!</p>
+        <button class="btn sci" onclick="selectQuiz('science')">Play Science</button>
+      </div>
+      <div id="history">
+        <img src="history.png" alt="Building" class="quiz-img" />
+        <h1>History</h1>
+        <p>Challenge yourself with questions about ancient civilizations, famous leaders, and key events that shaped the world. A fun way to brush up on history facts!</p>
+        <button class="btn history" onclick="selectQuiz('history')">Play History</button>
+      </div>
     </div>
-
-    <!-- Quiz Content -->
-    <div id="question-container">
-      <div id="question"></div>
-      <div id="answer-buttons" class="btn-grid"></div>
-    </div>
-
-    <!-- Typed Answer Section -->
-    <div id="typed-answer-container" class="hidden">
-      <label for="typed-answer">Your Answer:</label>
-      <input type="text" id="typed-answer" />
-      <button id="submit-answer">Submit</button>
-    </div>
-
-    <!-- Next Button -->
-    <button id="next-btn" class="hidden">Next</button>
   </div>
 
-  <script src="script.js"></script>
+  <script src="selector.js"></script>
 </body>
 </html>
